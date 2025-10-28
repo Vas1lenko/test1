@@ -67,7 +67,7 @@ describe("validatePassword", () => {
     "Zxc789#",
     "Pass123$",
     "Strong99%"
-  ])("PasswordWithOneSpecialSymbol_ValidatePassword_ReceiveValidationError_%s", (password) => {
+  ])("PasswordWithOneSpecialSymbol_ValidatePassword_ReceveValidationError_%s", (password) => {
     const result = validatePassword(password);
     expect(result.isSuccess).toBe(false);
     expect(result.errors).toContain("Пароль должен содержать минимум 2 спец-символа");
@@ -85,3 +85,4 @@ describe("validatePassword", () => {
     expect(result.errors).toContain("Пароль должен содержать максимум 16 символов");
   });
 });
+
